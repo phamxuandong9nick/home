@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Công Cụ Tiện Ích</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Using Google Font 'Inter' for better readability */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom styles for the "app icon" buttons */
+        .tool-card {
+            background-color: white;
+            border-radius: 1.5rem; /* More rounded corners like app icons */
+            padding: 1.5rem 1rem;
+            text-decoration: none;
+            color: #374151; /* gray-700 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: all 0.3s ease-in-out;
+            aspect-ratio: 1 / 1; /* Make them square */
+        }
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .tool-card .icon-wrapper {
+            width: 4rem; /* 64px */
+            height: 4rem; /* 64px */
+            border-radius: 1rem; /* Rounded square for the icon background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.75rem; /* 12px */
+            transition: transform 0.3s ease;
+        }
+        .tool-card:hover .icon-wrapper {
+            transform: scale(1.1);
+        }
+        .tool-card .tool-label {
+            font-weight: 600; /* semibold */
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    
+    <div class="w-full max-w-2xl text-center">
+        <!-- Header Section -->
+        <header class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 tracking-tight">Bộ Công Cụ Tiện Ích</h1>
+            <p class="text-gray-600 mt-3 text-lg">Chọn một công cụ để bắt đầu</p>
+        </header>
+
+        <!-- Main Content - Tool Grid -->
+        <main>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-8">
+                
+                <!-- OCR Tool Card -->
+                <a href="https://phamxuandong9nick.github.io/read/" class="tool-card">
+                    <div class="icon-wrapper bg-gradient-to-br from-blue-500 to-indigo-600 shadow-lg">
+                        <i class="fas fa-file-alt text-3xl text-white"></i>
+                    </div>
+                    <span class="tool-label">Trích xuất Chữ</span>
+                </a>
+                
+                <!-- QR Generator Card -->
+                <a href="#" class="tool-card" onclick="alert('Chức năng này sẽ sớm được cập nhật!'); return false;">
+                    <div class="icon-wrapper bg-gradient-to-br from-green-500 to-emerald-600 shadow-lg">
+                        <i class="fas fa-qrcode text-3xl text-white"></i>
+                    </div>
+                    <span class="tool-label">Tạo mã QR</span>
+                </a>
+
+                <!-- QR Scanner Card -->
+                <a href="#" class="tool-card" onclick="alert('Chức năng này sẽ sớm được cập nhật!'); return false;">
+                    <div class="icon-wrapper bg-gradient-to-br from-purple-500 to-violet-600 shadow-lg">
+                        <i class="fas fa-camera-retro text-3xl text-white"></i>
+                    </div>
+                    <span class="tool-label">Quét mã QR</span>
+                </a>
+
+                <!-- Thêm các công cụ khác ở đây theo mẫu trên -->
+                 <a href="#" class="tool-card" onclick="alert('Chức năng này sẽ sớm được cập nhật!'); return false;">
+                    <div class="icon-wrapper bg-gradient-to-br from-orange-500 to-amber-600 shadow-lg">
+                        <i class="fas fa-calculator text-3xl text-white"></i>
+                    </div>
+                    <span class="tool-label">Máy tính</span>
+                </a>
+
+                 <a href="#" class="tool-card" onclick="alert('Chức năng này sẽ sớm được cập nhật!'); return false;">
+                    <div class="icon-wrapper bg-gradient-to-br from-rose-500 to-pink-600 shadow-lg">
+                        <i class="fas fa-ruler-combined text-3xl text-white"></i>
+                    </div>
+                    <span class="tool-label">Chuyển đổi</span>
+                </a>
+                 <a href="#" class="tool-card" onclick="alert('Chức năng này sẽ sớm được cập nhật!'); return false;">
+                    <div class="icon-wrapper bg-gradient-to-br from-gray-700 to-gray-900 shadow-lg">
+                        <i class="fas fa-plus text-3xl text-white"></i>
+                    </div>
+                    <span class="tool-label">Thêm mới</span>
+                </a>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
